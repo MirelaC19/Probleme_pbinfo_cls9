@@ -2,7 +2,7 @@
  * @ Author: Mirela Cretu
  * @ Create Time: 2023-12-24 12:06:22
  * @ Modified by: Mirela Cretu
- * @ Modified time: 2023-12-24 12:10:17
+ * @ Modified time: 2023-12-28 20:40:36
  * @ Description: https://www.pbinfo.ro/probleme/3664/cifparcifimp
  */
 
@@ -12,18 +12,20 @@ using namespace std;
 
 int main(void)
 {
-    int n, p = 0, i = 0, a, ca;
+    int n, p = 0, i = 0, a;
     
     cin >> n;
 
-    for (int i = 1; i <= n; i++)
+    for (int j = 0; j < n; j++)
     {
         cin >> a;
-        ca = a;
+        if (a == 0)
+        {
+            p = p + 1;
+        }
         while (a != 0)
         {
-            ca = a % 10;
-            if (ca % 2 == 0)
+            if ((a % 10) % 2 == 0)
             {
                 p = p + 1;
             }
